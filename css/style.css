@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Playball&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input {
+  border: none;
+  padding: 5px;
+  color: #979797;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to right, rgb(224, 114, 133), rgba(224, 114, 133, 0.4));
+}
+body .container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 20rem;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 3rem;
+  font-family: "Playball", cursive;
+  color: #fff;
+  align-items: center;
+  border-radius: 15px;
+}
+body .container .timer {
+  position: relative;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.4);
+  background: conic-gradient(white 0deg, rgb(231, 127, 144) 0deg);
+}
+body .container .timer::before {
+  content: "";
+  position: absolute;
+  height: 9.5rem;
+  width: 9.5rem;
+  border-radius: 50%;
+  background-color: rgb(231, 127, 144);
+}
+body .container .timer .timer-input {
+  width: 90%;
+  height: 2rem;
+  color: #fff;
+  font-size: larger;
+  font-weight: bolder;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  z-index: 100;
+}
+body .container .timer .timer-input input {
+  width: 3rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+body .container .timer .timer-input input:focus {
+  outline: none;
+}
+body .container .btn-container {
+  position: relative;
+  width: 80%;
+  height: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body .container .btn-container button {
+  position: relative;
+  height: 100%;
+  width: 5rem;
+  border-radius: 10px;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+  box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.4);
+  color: rgb(231, 127, 144);
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+}
+body .container .btn-container button::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  width: 0rem;
+  height: 2rem;
+  background-color: rgb(231, 127, 144);
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+  z-index: -10;
+}
+body .container .btn-container button:hover {
+  color: #fff;
+  z-index: 1;
+}
+body .container .btn-container button:hover::after {
+  top: 0;
+  width: 100%;
+}
